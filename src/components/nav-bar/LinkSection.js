@@ -11,12 +11,11 @@ const styles = {
       "border": '1px solid rgba( 55, 55, 55, 0.2 )',
       "display": 'flex',
       "justify-content": 'space-evenly',
-      "flex-grow": '1',
-      "width": 'auto',
-      "height": "max-content",
+      "flex-wrap": 'no-wrap',
+      "width": '800px',
       "padding": '0',
       "margin": '10px',
-      "list-style-type": 'none'
+      "list-style-type": 'none',
     }
   }
   

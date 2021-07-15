@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = {
     linkItem: {
       "text-align": "center",
-      "height": 'inherit',
       "border-radius": (props) =>
         props.position === 'left' 
           ? '25px 0 0 25px' 
@@ -15,7 +14,7 @@ const styles = {
       "flex-basis": '0',
       "flex-grow": '1',
       "&:hover": {
-        "backgroundColor": "rgba( 254, 0, 0, 0.3)",
+        "backgroundColor": "rgba( 254, 0, 0, 0.4)",
      }
     },
     linkText: {
@@ -24,6 +23,7 @@ const styles = {
       "font-weight": 'bold',
       "display": 'block',
       "padding": '10px',
+      "white-space": 'nowrap'
     }
 }
 

@@ -1,24 +1,6 @@
-import { withStyles } from '@material-ui/core/styles';
-import logoImage from '../../images/logo.png';
-import LinkSection from './LinkSection';
-
-const styles = {
-  root: {
-    "display": 'flex',
-    "align-items": 'center',
-    "width": '100%',
-    "height": 'auto'
-  },
-  logo: {
-    "width": 'auto',
-    "height": "100px",
-    "margin": "10px",
-    "transition": "all .3s ease-in-out",
-    "&:hover": {
-      "transform": "scale(1.1)",
-   }
-  }
-}
+import { useMediaQuery } from '@material-ui/core';
+import FullNavBar from './FullNavBar';
+import CompactNavBar from './CompactNavBar';
 
 const links = [
   { text: 'About', path: '/about' },
@@ -33,18 +15,13 @@ const links = [
   { text: 'Bar List', path: '/bar' }
 ];
 
-const NavBar = (props) => {
-  const { classes } = props;
-
-  return (
-    <div className={classes.root}>
-      <LinkSection links={links.slice(0, links.length / 2)} />
-      <a href="/">
-        <img src={logoImage} className={classes.logo} alt="logo" />
-      </a>
-      <LinkSection links={links.slice(links.length / 2)} />
-    </div>
-  );
+const NavBar = () => {
+  if (useMediaQuery('(min-width:1280px)')) {
+    return <FullNavBar links={links} />;
+  }
+  else {
+    return <CompactNavBar links={links} />;
+  }
 }
 
-export default withStyles(styles)(NavBar);
+export default NavBar;
