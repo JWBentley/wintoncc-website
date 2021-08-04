@@ -22,7 +22,8 @@ const styles = {
     "flex-direction": 'column',
     "justify-content": 'center',
     "align-items": 'center',
-    "width": 'max-content',
+    "text-align": 'center',
+    "width": 'auto',
     "padding": '10px',
     "margin": '10px'
   },
@@ -36,16 +37,17 @@ const HomePage = (props) => {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <>
       <Background src={backgroundImage} />
-      
-      <div className={classes.box}>
-        <h2 className={classes.text}>Winton Cricket Club</h2>
-        <p className={classes.text}><a href="https://goo.gl/maps/YtDqpaeirr78uzmC6">Alder Forest Avenue, Winton, Salford, M30 8JL</a></p>
+      <div className={classes.root}>
+        
+        <div className={classes.box}>
+          <h1 className={classes.text}>Winton Cricket Club</h1>
+          <p className={classes.text}><a href="https://goo.gl/maps/YtDqpaeirr78uzmC6">Alder Forest Avenue, Winton, Salford, M30 8JL</a></p>
+        </div>
+        
       </div>
-      
-
-    </div>
+    </>
   );
 }
 
