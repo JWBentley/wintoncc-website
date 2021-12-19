@@ -1,5 +1,5 @@
 import { withStyles } from '@material-ui/core/styles'
-import { Background } from '../../components';
+import { Background, FixtureSummary } from '../../components';
 import backgroundImage from '../../images/ground.jpg'
 
 const styles = {
@@ -46,6 +46,8 @@ const HomePage = (props) => {
           <p className={classes.text}><a href="https://goo.gl/maps/YtDqpaeirr78uzmC6">Alder Forest Avenue, Winton, Salford, M30 8JL</a></p>
         </div>
         
+        <FixtureSummary />
+
       </div>
     </>
   );
